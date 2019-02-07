@@ -10,12 +10,11 @@ import org.springframework.stereotype.Component;
  * @author Alexander Bruckbauer s17001620
  */
 @Component
-public class WGUEmailAddressValidator implements InputValidator{
+public class WGUEmailAddressValidator extends InputValidator{
 
     @Override
     public Boolean validateInput(String input) {
-       Boolean isValid = false;
-       return isValid;
+       return isValidEmailAddress(input, "mail.glyndwr.ac.uk");
     }
 
 

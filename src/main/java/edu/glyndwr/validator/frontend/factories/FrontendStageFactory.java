@@ -7,6 +7,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import org.springframework.stereotype.Service;
 
@@ -14,7 +15,7 @@ import org.springframework.stereotype.Service;
  *
  * @author Alexander Bruckbauer s17001620
  */
-@Service
+@Component
 public class FrontendStageFactory {
 
     private UniversityRecordTableViewFactory universityRecordTableViewFactory;

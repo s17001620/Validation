@@ -10,12 +10,16 @@ import org.springframework.stereotype.Component;
  * @author Alexander Bruckbauer s17001620
  */
 @Component
-public class PlasCochCampusRoomNumberValidator implements InputValidator{
+public class PlasCochCampusRoomNumberValidator extends InputValidator{
 
     @Override
     public Boolean validateInput(String input) {
-       Boolean isValid = false;
-       return isValid;
+             if (isNotNullOrNotEmptyOrNotBlank(input)) {
+            if (Character.isLetter(input.charAt(0)) && input.length() == 4) {
+                return Character.isDigit(input.charAt(1)) && Character.isDigit(input.charAt(2)) && Character.isDigit(input.charAt(3));
+            }
+        }
+        return false;
     }
 
 

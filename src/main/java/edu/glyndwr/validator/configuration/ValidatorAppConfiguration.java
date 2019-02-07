@@ -13,4 +13,5 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan("edu.glyndwr.validator")
 public class ValidatorAppConfiguration {
 
+    
 }

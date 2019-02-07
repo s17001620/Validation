@@ -4,12 +4,14 @@ import edu.glyndwr.validator.frontend.controller.ValidatorViewController;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.stage.Stage;
+import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
+@Log
 @SpringBootApplication
 @ComponentScan("edu.glyndwr.validator")
 public class ValidatorApplication extends Application {
