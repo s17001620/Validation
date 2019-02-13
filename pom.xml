@@ -12,7 +12,16 @@
     <artifactId>validator</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>validator</name>
-    <description>Demo project for Spring Boot</description>
+    <description>Task 3: Validating input
+        For this task, a program must be developed that allows the
+        input of all of the following types of data, displaying whether
+        the input is valid or not:
+        • Student ID
+        • Computing module code
+        • Plas Coch campus room number
+        • WGU email address
+        • UK postcode
+    </description>
 
     <properties>
         <java.version>11</java.version>
