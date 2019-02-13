@@ -7,26 +7,36 @@ import edu.glyndwr.validator.frontend.strategies.validation.implementations.Plas
 import edu.glyndwr.validator.frontend.strategies.validation.implementations.StudentIDValidator;
 import edu.glyndwr.validator.frontend.strategies.validation.implementations.UKPostCodeValidator;
 import edu.glyndwr.validator.frontend.strategies.validation.implementations.WGUEmailAddressValidator;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 
 import java.util.Arrays;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TableView.TableViewSelectionModel;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 
 /**
  *
  * @author Alexander Bruckbauer s17001620
  */
+@Log
 @Component
 @Getter
 @Setter
@@ -54,6 +64,21 @@ public class ValidatorViewController {
     public void initializeStage(Stage primaryStage) {
         FrontendStageFactory uIfactory = new FrontendStageFactory();
         initializeFields();
+        InputStream icon = null;
+        try {
+            icon = new DataInputStream(new FileInputStream(new ClassPathResource("icon.png").getFile()));
+            
+            if(null!=icon){
+                Image imageIcon = new Image(icon);
+                primaryStage.getIcons().add(imageIcon); 
+            }else{
+                log.info("icon inputstream null");
+            }
+           
+        } catch (IOException ex) {
+            Logger.getLogger(ValidatorViewController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
         uIfactory.buildFrontendUI(this, primaryStage).show();
     }
 
