@@ -1,7 +1,7 @@
 package edu.glyndwr.validator.frontend.factories;
 
 
-import edu.glyndwr.validator.backend.model.entities.UniversityRecord;
+import edu.glyndwr.validator.backend.datal.entities.UniversityRecord;
 import edu.glyndwr.validator.frontend.controller.ValidatorViewController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

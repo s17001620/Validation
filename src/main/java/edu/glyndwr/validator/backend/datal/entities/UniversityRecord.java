@@ -1,4 +1,4 @@
-package edu.glyndwr.validator.backend.model.entities;
+package edu.glyndwr.validator.backend.datal.entities;
 
 import lombok.Data;
 

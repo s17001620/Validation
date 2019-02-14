@@ -1,6 +1,6 @@
 package edu.glyndwr.validator.frontend.controller;
 
-import edu.glyndwr.validator.backend.model.entities.UniversityRecord;
+import edu.glyndwr.validator.backend.datal.entities.UniversityRecord;
 import edu.glyndwr.validator.frontend.factories.FrontendStageFactory;
 import edu.glyndwr.validator.frontend.strategies.validation.implementations.ComputingModuleCodeValidator;
 import edu.glyndwr.validator.frontend.strategies.validation.implementations.PlasCochCampusRoomNumberValidator;
