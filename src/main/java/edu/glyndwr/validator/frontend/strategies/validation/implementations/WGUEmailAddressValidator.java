@@ -2,7 +2,7 @@
 
 package edu.glyndwr.validator.frontend.strategies.validation.implementations;
 
-import edu.glyndwr.validator.frontend.strategies.validations.superclasses.InputValidator;
+import edu.glyndwr.validator.frontend.strategies.validation.superclasses.InputValidator;
 import org.springframework.stereotype.Component;
 
 /**

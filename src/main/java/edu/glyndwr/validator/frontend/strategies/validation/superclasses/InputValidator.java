@@ -1,4 +1,4 @@
-package edu.glyndwr.validator.frontend.strategies.validations.superclasses;
+package edu.glyndwr.validator.frontend.strategies.validation.superclasses;
 
 import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
